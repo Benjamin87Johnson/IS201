@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wheel of Fortune</title>
+  <style>
+    /* Add your CSS styling here */
+      body {
+      background-image: url('https://static1.thegamerimages.com/wordpress/wp-content/uploads/2024/03/balatro-wheel-of-fortune-tarot-card.jpg');
+      background-size: cover; /* Ensure the image covers the whole screen */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent image from repeating */
+      height: 100vh; /* Make sure the background covers the whole viewport */
+      margin: 0; /* Remove default margin */
+    }
+    #message {
+      font-size: 50px;
+      font-weight: bold;
+        font-family: monospace;
+        justify-self: center;
+        color: white
+            
+
+    }
+  </style>
+</head>
+<body>
+  <input type="button" value="Want to spin the Wheel of Fortune? 1/4 Chance of Winning big! (Inspired by Balatro)" id="spinButton">
+  <p id="message"></p>
+
+  <script>
+    const spinButton = document.getElementById('spinButton');
+    const message = document.getElementById('message');
+
+    spinButton.addEventListener('click', function() {
+      spinButton.disabled = true; // Disable button during countdown
+      message.textContent = "Spinning...";
+
+      let countdown = 3;
+      const countdownInterval = setInterval(function() {
+        message.textContent = countdown.toString();
+        countdown--;
+        if (countdown < 0) {
+          clearInterval(countdownInterval);
+
+          // Determine win/loss (1/4 chance of winning)
+          const randomNumber = Math.random(); // Generates a number between 0 and 1
+          if (randomNumber < 0.25) { // 1/4 chance to win
+            message.textContent = "Nope!";
+          } else {
+            message.textContent = "Nope!";
+          }
+
+          spinButton.disabled = false; // Re-enable the button
+        }
+      }, 1000); // Countdown every 1 second
+    });
+  </script>
+</body>
+</html>

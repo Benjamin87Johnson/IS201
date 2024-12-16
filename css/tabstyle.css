@@ -1,0 +1,62 @@
+
+body {
+    color: white;
+    background-color: lightsteelblue; 
+    font-family: 'Arial', sans-serif; 
+}
+
+/* Style for all headers */
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: underline; 
+    font-weight: bold; 
+}
+/* Style for the first content block */
+#div1 {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 30%; /* Sets the width of the div */
+    display: inline-block; /* Ensures divs are placed next to each other */
+    text-align: center;
+}
+
+/* Style for the second content block */
+#div2 {
+    background-color: rgba(0, 123, 255, 0.7); /* Semi-transparent blue background */
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Style for the third content block */
+#div3 {
+    background-color: rgba(255, 87, 34, 0.7); /* Semi-transparent orange background */
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Optional: For large screens, make divs appear side by side */
+@media (min-width: 768px) {
+    #div1, #div2, #div3 {
+        width: 30%;
+    }
+}
+
+/* Optional: For smaller screens, make divs stack vertically */
+@media (max-width: 767px) {
+    #div1, #div2, #div3 {
+        width: 90%; /* Takes up most of the screen */
+        margin: 10px auto; /* Center the divs */
+    }
+}
